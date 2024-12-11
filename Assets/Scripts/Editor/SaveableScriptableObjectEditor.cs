@@ -1,5 +1,4 @@
 using UnityEditor;
-using UnityEngine;
 using UnityEngine.UIElements;
 
 [CustomEditor(typeof(SaveableScriptableObject), true)]
@@ -20,6 +19,13 @@ public class SaveableScriptableObjectEditor : Editor
         };
         root.Add(saveButton);
 
+        // Create a load button
+        var loadButton = new Button(() => Load((SaveableScriptableObject)target))
+        {
+            text = "Load"
+        };
+        root.Add(loadButton);
+
         return root;
     }
 
@@ -27,5 +33,11 @@ public class SaveableScriptableObjectEditor : Editor
     {
         // Implement your save logic here
         scriptableObject.Save();
+    }
+
+    private void Load(SaveableScriptableObject scriptableObject)
+    {
+        // Implement your load logic here
+        scriptableObject.Load();
     }
 }

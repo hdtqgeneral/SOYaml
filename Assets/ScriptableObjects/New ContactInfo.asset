@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Something
   Data:
-    Phone: Yea boi
-    Address: Yeaaaaaa boi
+    Phone: Yea boi 1
+    Address: "Si\xEAu nh\xE2n gao."
