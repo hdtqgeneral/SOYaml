@@ -2,7 +2,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-[CustomEditor(typeof(SaveableScriptableObject))]
+[CustomEditor(typeof(SaveableScriptableObject), true)]
 public class SaveableScriptableObjectEditor : Editor
 {
     public override VisualElement CreateInspectorGUI()
@@ -26,6 +26,6 @@ public class SaveableScriptableObjectEditor : Editor
     private void Save(SaveableScriptableObject scriptableObject)
     {
         // Implement your save logic here
-        Debug.Log("Save button clicked for " + scriptableObject.name);
+        scriptableObject.Save();
     }
 }
